@@ -1,0 +1,23 @@
+# File gốc: editor ngừng tìm .editorconfig ở các thư mục cha
+root = true
+
+# Áp dụng cho mọi file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 3
+
+# YAML, JSON: quy ước phổ biến là 2 space
+[*.{yml,yaml,json}]
+indent_size = 2
+
+# Markdown: 2 space cuối dòng nghĩa là xuống dòng, không được xoá
+[*.md]
+trim_trailing_whitespace = false
+
+# Script Windows bắt buộc dùng CRLF
+[*.{cmd,bat}]
+end_of_line = crlf
